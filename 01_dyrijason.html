@@ -35,7 +35,7 @@
 
       document.addEventListener("DOMContentLoaded", start);
 
-      function start() {
+      function start(dyr) {
         const container = document.querySelector(".container");
         const dyrTemplate = document.querySelector("template");
 
@@ -50,6 +50,7 @@
           container.appendChild(klon);
         });
       }
+      hentdata(fil);
     </script>
   </body>
 </html>
