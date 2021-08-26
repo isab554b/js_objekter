@@ -22,6 +22,8 @@
         <img src="" alt="" />
         <p class="type"></p>
         <p class="levested"></p>
+        <p>Føde:</p>
+        <ul class="fødeliste"></ul>
       </article>
     </template>
 
@@ -47,6 +49,12 @@
             ".levested"
           ).textContent = `Levested: ${dyr.levested}`;
           klon.querySelector("img").src = dyr.billede;
+
+          dyr.føde.forEach((føde) => {
+            klon.querySelector(".fødeliste").innerHTML +=
+              "<li>" + føde + "</li>";
+          });
+
           container.appendChild(klon);
         });
       }
