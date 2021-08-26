@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      img {
+        max-width: 100%;
+      }
+      body {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+
+      article {
+        border: 1px solid #999;
+        margin: 5px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container"></section>
+    <template>
+      <article id="events">
+        <h3></h3>
+        <img src="" alt="" />
+        <p class="land"></p>
+        <p class="genre"></p>
+      </article>
+    </template>
+    <script>
+      document.addEventListener("DOMContentLoaded", start);
+      let events = [
+        {
+          titel: "A Calling",
+          land: "Danmark",
+          billede:
+            "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/W6dOqabNhHKBPXxxKKEZRA84-1280.jpg",
+          genre: "Fiktion",
+        },
+        {
+          titel: "A Hole In My Heart",
+          land: "Holland",
+          billede:
+            "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/Q8K1pZrOs03Q0IrDkBwGVu5r-720.jpg",
+          genre: "Fiktion",
+        },
+        {
+          titel: "A Place In The Sun",
+          land: "Tyskland",
+          billede:
+            "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/hUd4SdGQ8I23ovxWnGtBz4Ck-720.jpg",
+          genre: "Dokumentar",
+        },
+        {
+          titel: "A Summer Place",
+          land: "Grækenland",
+          billede:
+            "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/9ZXEAY471UE4gFwHMXeRb17p-360.jpg",
+          genre: "Fiktion",
+        },
+        {
+          titel: "A Tower og Two",
+          land: "Danmark",
+          billede:
+            "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/Zdt2ODEqSVOkNe8nUaSSu8kd.jpg",
+          genre: "fiktion",
+        },
+      ];
+      function start() {
+        const container = document.querySelector(".container");
+        const eventsTemplate = document.querySelector("template");
+
+        events.forEach((events) => {
+          let klon = eventsTemplate.cloneNode(true).content;
+          klon.querySelector("h3").textContent = events.titel;
+          klon.querySelector(".land").textContent = `Land: ${events.land}`;
+          klon.querySelector(".genre").textContent = `Genre: ${events.genre}`;
+          klon.querySelector("img").src = events.billede;
+          container.appendChild(klon);
+        });
+      }
+    </script>
+  </body>
+</html>

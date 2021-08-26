@@ -4,34 +4,34 @@
     "type": "pattedyr",
     "billede": "http://mabe-kea.dk/E19/pics/pig.png",
     "levested": "svinefarme",
-    "føde": ["græs", "urter", "bær"]
+    "føde": ["Græs", "Urter", "Bær"]
   },
   {
     "navn": "Frø",
     "type": "amfibie",
     "billede": "http://mabe-kea.dk/E19/pics/frog.png",
     "levested": "vandhul",
-    "føde": ["insketer", "bladlus", "fluer"]
+    "føde": ["Insketer", "Bladlus", "Fluer"]
   },
   {
     "navn": "Ræv",
     "type": "pattedyr",
     "billede": "http://mabe-kea.dk/E19/pics/fox.png",
     "levested": "skoven",
-    "føde": ["mus", "harer", "kaniner"]
+    "føde": ["Mus", "Harer", "Kaniner"]
   },
   {
     "navn": "Sild",
     "type": "fisk",
     "billede": "http://mabe-kea.dk/E19/pics/sild.jpg",
     "levested": "havet",
-    "føde": ["plankton", "snegle", "små fisk"]
+    "føde": ["Plankton", "Snegle", "Små fisk"]
   },
   {
     "navn": "Krokodille",
     "type": "krybdyr",
     "billede": "http://mabe-kea.dk/E19/pics/kroko.jpg",
     "levested": "floden",
-    "føde": ["bløddyr", "fugle", "pattedyr"]
+    "føde": ["Bløddyr", "Fugle", "Pattedyr"]
   }
 ]
